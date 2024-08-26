@@ -5,5 +5,16 @@ const question = [
     "read,leer",
     "write,escribir",
     "because,poque",
-    "you all plural,usted"
+    "you all plural,usted",
+    "he,el",
+    "she,ella",
+    "walk,caminar",
+    "see,ver",
+    "think,pensar",
+    "feel,sentir",
+    "watch,mirar",
+    "work,trabajar",
+    "ask,preguntar",
+    "remember,recordar",
+    "allow/permit,permitir",
 ];
