@@ -26,5 +26,5 @@ const question = [
     "before,antes",
     "today,hoy",
     "yesterday,ayer",
-    "tommorow,mañana"
+    "tommorow,manana"
 ];
