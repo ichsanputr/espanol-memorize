@@ -1,11 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <h1>Halo</h1>
+    <div class="main">
+        <h1 id="word"></h1>
+        <input type="text" id="answer">
+    </div>
 </body>
+<script src="question.js"></script>
+<script>
+    const inputElement = document.getElementById('answer');
+    inputElement.addEventListener('keydown', scrambleQuestion);
+
+    let word = ""
+    let answer = ""
+
+    // get first word - answer
+    const randomIndex = Math.floor(Math.random() * question.length);
+    [word, answer] = question[randomIndex].split(',');
+
+    document.getElementById('word').textContent = word
+
+    function scrambleQuestion() {
+        if (event.key === "Enter" || event.keyCode === 13) {
+            const inputValue = event.target.value;
+
+            if (inputValue == answer) {
+                const randomIndex = Math.floor(Math.random() * question.length);
+                [word, answer] = question[randomIndex].split(',');
+
+                document.getElementById('word').textContent = word
+            }
+
+            document.getElementById('answer').value = ""
+        }
+    }
+</script>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .main {
+        padding: 20px;
+        text-align: center;
+    }
+</style>
+
 </html>
