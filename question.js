@@ -17,4 +17,14 @@ const question = [
     "ask,preguntar",
     "remember,recordar",
     "allow/permit,permitir",
+    "languange,idioma",
+    "however,sin embargo",
+    "yes,Sí",
+    "people,gente",
+    "learn,aprender",
+    "to,a",
+    "before,antes",
+    "today,hoy",
+    "yesterday,ayer",
+    "tommorow,mañana"
 ];
