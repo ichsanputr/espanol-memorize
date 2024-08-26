@@ -3,5 +3,7 @@ const question = [
     "drink,beber",
     "study,estudiar",
     "read,leer",
-    "write,escribir"
+    "write,escribir",
+    "because,poque",
+    "you all plural,usted"
 ];

@@ -31,7 +31,7 @@
         if (event.key === "Enter" || event.keyCode === 13) {
             const inputValue = event.target.value;
 
-            if (inputValue == answer) {
+            if (inputValue.toLowerCase() == answer) {
                 const randomIndex = Math.floor(Math.random() * question.length);
                 [word, answer] = question[randomIndex].split(',');
 
