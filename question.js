@@ -32,7 +32,7 @@ const question = [
     "good night,buenas noches",
     "after,despues",
     "happy,feliz",
-    "i think,yo creo"
+    "i think,yo creo",
     "what,que",
     "where,donde",
     "like (seperti),como",    
