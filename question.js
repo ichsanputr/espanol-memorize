@@ -15,6 +15,8 @@ const question = [
     "watch,mirar",
     "work,trabajar",
     "ask,preguntar",
+    "i ask,yo pregunto",
+    "you ask,tu preguntas",
     "remember,recordar",
     "allow/permit,permitir",
     "languange,idioma",
@@ -42,5 +44,6 @@ const question = [
     "my friends (men),mis amigos",
     "with,con",
     "with my father,con mi padre",
-    "with my family,con mi familia"
+    "with my family,con mi familia",
+    "i feel happy,me sento feliz"
 ];
