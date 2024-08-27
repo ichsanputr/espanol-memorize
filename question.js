@@ -26,5 +26,8 @@ const question = [
     "before,antes",
     "today,hoy",
     "yesterday,ayer",
-    "tommorow,manana"
+    "tommorow,manana",
+    "good morning,buenos dias",
+    "good afternoon,buenas tardes",
+    "good night,buenas noches"
 ];
