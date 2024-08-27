@@ -30,5 +30,17 @@ const question = [
     "good morning,buenos dias",
     "good afternoon,buenas tardes",
     "good night,buenas noches",
-    "after,despues"
+    "after,despues",
+    "happy,feliz",
+    "i think,yo creo"
+    "what,que",
+    "where,donde",
+    "like (seperti),como",    
+    "and,y",
+    "my,mi",
+    "my friend (men),mi amigo",
+    "my friends (men),mis amigos",
+    "with,con",
+    "with my father,con mi padre",
+    "with my family,con mi familia"
 ];
