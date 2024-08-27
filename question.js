@@ -19,7 +19,7 @@ const question = [
     "allow/permit,permitir",
     "languange,idioma",
     "however,sin embargo",
-    "yes,Sí",
+    "yes,si",
     "people,gente",
     "learn,aprender",
     "to,a",
