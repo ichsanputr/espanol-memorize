@@ -99,7 +99,7 @@ const number = [
     "97,noventa y siete",
     "98,noventa y ocho",
     "99,noventa y nueve",
-    "100,cien"
+    "100,ciento"
 ];
 
 const verb = [
@@ -117,40 +117,57 @@ const verb = [
     "remember,recordar",
     "allow/permit,permitir",
     "think,pensar",
+    "open,abrir",
+    "sleep,dormir",
+    "see,ver",
 ]
 
-const another = [
+const conjunction = [
     "because,poque",
-    "you all plural,usted",
-    "he,el",
-    "she,ella",
-    "see,ver",
-    "i ask,yo pregunto",
-    "you ask,tu preguntas",
-    "languange,idioma",
     "however,sin embargo",
-    "yes,si",
-    "people,gente",
-    "to,a",
     "before,antes",
+    "after,despues",
+    "then,entonces",
+    "but,pero",
+    "for,para",
+    "and,y",
+    "or,o",
+    "when,cuando",
+    "if,si",
+    "i have dog and cat,tengo perro y gato"
+]
+
+const conversation = [
+    "i don't know,no se",
+    "i am ichsan,yo soy ichsan",
+    "i am happy,estoy feliz",
+    "i am healty,estoy sano",
+    "i am at home,estoy en casa",
+    "i am studying,estoy estudiando",
+    "i am tall,soy alto",
+    "i am student,soy estudiante",
+    "i am father of ichsan,soy el padre de ichsan",
+]
+
+const preposition = [
+    "in/on/at,en",
+    "of/from/about,de",
+    "to/at clock,a",
+    "with,con",
+    "on/about,sobre",
+]
+
+const thing = [
+    "people,gente",
+    "book,libro",
+    "pencil,lapiz",
+    "table,mesa",
+    "father,padre",
+]
+
+const adverb = [
+    "now,ahora",
     "today,hoy",
     "yesterday,ayer",
-    "tommorow,manana",
-    "good morning,buenos dias",
-    "good afternoon,buenas tardes",
-    "good night,buenas noches",
-    "after,despues",
-    "happy,feliz",
-    "i think,yo creo",
-    "what,que",
-    "where,donde",
-    "like (seperti),como",
-    "and,y",
-    "my,mi",
-    "my friend (men),mi amigo",
-    "my friends (men),mis amigos",
-    "with,con",
-    "with my father,con mi padre",
-    "with my family,con mi familia",
-    "i feel happy,me sento feliz"
+    "tommorow,manana"
 ]

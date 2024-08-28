@@ -4,13 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Learn Espanol</title>
 </head>
 
 <body>
     <button onclick="changeMode('number')">Number</button>
     <button onclick="changeMode('verb')">Verb</button>
-    <button onclick="changeMode('another')">Another</button>
+    <button onclick="changeMode('adverb')">Adverb</button>
+    <button onclick="changeMode('thing')">Thing</button>
+    <button onclick="changeMode('conjunction')">Conjunction</button>
+    <button onclick="changeMode('preposition')">Preposition</button>
+    <button onclick="changeMode('conversation')">Conversation</button>
     <div class="main">
         <div>
             <h1 id="word"></h1>
@@ -28,12 +32,21 @@
         if (mode == "number") {
             const randomIndex = Math.floor(Math.random() * number.length);
             [word, answer] = number[randomIndex].split(',');
-        } else if (mode == "another") {
-            const randomIndex = Math.floor(Math.random() * another.length);
-            [word, answer] = another[randomIndex].split(',')
         } else if (mode == "verb") {
             const randomIndex = Math.floor(Math.random() * verb.length);
             [word, answer] = verb[randomIndex].split(',');
+        } else if (mode == "conjunction") {
+            const randomIndex = Math.floor(Math.random() * conjunction.length);
+            [word, answer] = conjunction[randomIndex].split(',');
+        } else if (mode == "conversation") {
+            const randomIndex = Math.floor(Math.random() * conversation.length);
+            [word, answer] = conversation[randomIndex].split(',');
+        } else if (mode == "adverb") {
+            const randomIndex = Math.floor(Math.random() * adverb.length);
+            [word, answer] = adverb[randomIndex].split(',');
+        } else if (mode == "preposition") {
+            const randomIndex = Math.floor(Math.random() * preposition.length);
+            [word, answer] = preposition[randomIndex].split(',');
         }
 
         document.getElementById('word').textContent = word
@@ -60,12 +73,24 @@
                 if (mode == "number") {
                     const randomIndex = Math.floor(Math.random() * number.length);
                     [word, answer] = number[randomIndex].split(',');
-                } else if (mode == "another") {
-                    const randomIndex = Math.floor(Math.random() * another.length);
-                    [word, answer] = another[randomIndex].split(',');
                 } else if (mode == "verb") {
                     const randomIndex = Math.floor(Math.random() * verb.length);
                     [word, answer] = verb[randomIndex].split(',');
+                } else if (mode == "conjunction") {
+                    const randomIndex = Math.floor(Math.random() * conjunction.length);
+                    [word, answer] = conjunction[randomIndex].split(',');
+                } else if (mode == "conversation") {
+                    const randomIndex = Math.floor(Math.random() * conversation.length);
+                    [word, answer] = conversation[randomIndex].split(',');
+                } else if (mode == "thing") {
+                    const randomIndex = Math.floor(Math.random() * thing.length);
+                    [word, answer] = thing[randomIndex].split(',');
+                } else if (mode == "adverb") {
+                    const randomIndex = Math.floor(Math.random() * adverb.length);
+                    [word, answer] = adverb[randomIndex].split(',');
+                } else if (mode == "preposition") {
+                    const randomIndex = Math.floor(Math.random() * preposition.length);
+                    [word, answer] = preposition[randomIndex].split(',');
                 }
 
                 document.getElementById('word').textContent = word
