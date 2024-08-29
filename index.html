@@ -8,15 +8,21 @@
 </head>
 
 <body>
-    <button onclick="changeMode('number')">Number</button>
-    <button onclick="changeMode('verb')">Verb</button>
-    <button onclick="changeMode('adverb')">Adverb</button>
-    <button onclick="changeMode('thing')">Thing</button>
-    <button onclick="changeMode('conjunction')">Conjunction</button>
-    <button onclick="changeMode('preposition')">Preposition</button>
-    <button onclick="changeMode('conversation')">Conversation</button>
+    <div>
+        <button onclick="changeMode('number')">Number</button>
+        <button onclick="changeMode('verb')">Verb</button>
+        <button onclick="changeMode('adverb')">Adverb</button>
+        <button onclick="changeMode('thing')">Thing</button>
+        <button onclick="changeMode('conjunction')">Conjunction</button>
+        <button onclick="changeMode('preposition')">Preposition</button>
+        <button onclick="changeMode('conversation')">Conversation</button>
+    </div>
+    <div id="correctAnswer">Correct 😺 0</div>
+    <div id="wrongAnswer">Wrong 😭 0</div>
     <div class="main">
         <div>
+            <p id="wrong">Wrong!!</p>
+            <p id="correct">Correct</p>
             <h1 id="word"></h1>
             <input type="text" id="answer">
         </div>
@@ -25,28 +31,27 @@
 <script src="question.js"></script>
 <script>
     let mode = "number"
+    let prevNumber = 0
+    let correctAnswer = 0
+    let wrongAnswer = 0
 
     function changeMode(_mode) {
         mode = _mode
 
         if (mode == "number") {
-            const randomIndex = Math.floor(Math.random() * number.length);
-            [word, answer] = number[randomIndex].split(',');
+            [word, answer] = number[randomDiffFromPrevious(0, number.length)].split(',');
         } else if (mode == "verb") {
-            const randomIndex = Math.floor(Math.random() * verb.length);
-            [word, answer] = verb[randomIndex].split(',');
+            [word, answer] = verb[randomDiffFromPrevious(0, verb.length)].split(',');
         } else if (mode == "conjunction") {
-            const randomIndex = Math.floor(Math.random() * conjunction.length);
-            [word, answer] = conjunction[randomIndex].split(',');
+            [word, answer] = conjunction[randomDiffFromPrevious(0, conjunction.length)].split(',');
         } else if (mode == "conversation") {
-            const randomIndex = Math.floor(Math.random() * conversation.length);
-            [word, answer] = conversation[randomIndex].split(',');
+            [word, answer] = conversation[randomDiffFromPrevious(0, conversation.length)].split(',');
         } else if (mode == "adverb") {
-            const randomIndex = Math.floor(Math.random() * adverb.length);
-            [word, answer] = adverb[randomIndex].split(',');
+            [word, answer] = adverb[randomDiffFromPrevious(0, adverb.length)].split(',');
         } else if (mode == "preposition") {
-            const randomIndex = Math.floor(Math.random() * preposition.length);
-            [word, answer] = preposition[randomIndex].split(',');
+            [word, answer] = preposition[randomDiffFromPrevious(0, preposition.length)].split(',');
+        } else if (mode == "thing") {
+            [word, answer] = thing[randomDiffFromPrevious(0, thing.length)].split(',');
         }
 
         document.getElementById('word').textContent = word
@@ -68,39 +73,78 @@
         if (event.key === "Enter" || event.keyCode === 13) {
             const inputValue = event.target.value;
 
-            if (inputValue.toLowerCase() == answer) {
+            if (inputValue.toLowerCase().replace(/\s+/g, "") == answer) {
                 // based on mode
                 if (mode == "number") {
-                    const randomIndex = Math.floor(Math.random() * number.length);
-                    [word, answer] = number[randomIndex].split(',');
+                    [word, answer] = number[randomDiffFromPrevious(0, number.length)].split(',');
                 } else if (mode == "verb") {
-                    const randomIndex = Math.floor(Math.random() * verb.length);
-                    [word, answer] = verb[randomIndex].split(',');
+                    [word, answer] = verb[randomDiffFromPrevious(0, verb.length)].split(',');
                 } else if (mode == "conjunction") {
-                    const randomIndex = Math.floor(Math.random() * conjunction.length);
-                    [word, answer] = conjunction[randomIndex].split(',');
+                    [word, answer] = conjunction[randomDiffFromPrevious(0, conjunction.length)].split(',');
                 } else if (mode == "conversation") {
-                    const randomIndex = Math.floor(Math.random() * conversation.length);
-                    [word, answer] = conversation[randomIndex].split(',');
-                } else if (mode == "thing") {
-                    const randomIndex = Math.floor(Math.random() * thing.length);
-                    [word, answer] = thing[randomIndex].split(',');
+                    [word, answer] = conversation[randomDiffFromPrevious(0, conversation.length)].split(',');
                 } else if (mode == "adverb") {
-                    const randomIndex = Math.floor(Math.random() * adverb.length);
-                    [word, answer] = adverb[randomIndex].split(',');
+                    [word, answer] = adverb[randomDiffFromPrevious(0, adverb.length)].split(',');
                 } else if (mode == "preposition") {
-                    const randomIndex = Math.floor(Math.random() * preposition.length);
-                    [word, answer] = preposition[randomIndex].split(',');
+                    [word, answer] = preposition[randomDiffFromPrevious(0, preposition.length)].split(',');
+                } else if (mode == "thing") {
+                    [word, answer] = thing[randomDiffFromPrevious(0, thing.length)].split(',');
                 }
 
+                showCorrect()
                 document.getElementById('word').textContent = word
+                correctAnswer += 1
+                document.getElementById('correctAnswer').textContent = "Correct 😺 " + correctAnswer
+            } else {
+                showWrong()
+                wrongAnswer += 1
+                document.getElementById('wrongAnswer').textContent = "Wrong 😭 " + wrongAnswer
             }
 
             document.getElementById('answer').value = ""
         }
     }
+
+    function showWrong() {
+        const element = document.getElementById('wrong');
+        // Show the element
+        element.style.color = 'red';
+
+        // Hide the element after 1 second (1000 milliseconds)
+        setTimeout(() => {
+            element.style.color = 'transparent';
+        }, 1000);
+    }
+
+    function showCorrect() {
+        const element = document.getElementById('correct');
+        // Show the element
+        element.style.color = 'green';
+
+        // Hide the element after 1 second (1000 milliseconds)
+        setTimeout(() => {
+            element.style.color = 'transparent';
+        }, 1000);
+    }
+
+    function randomDiffFromPrevious(min, max) {
+        do {
+            randomNumber = Math.floor(Math.random() * (max - min)) + min;
+        } while (randomNumber === prevNumber);
+
+        prevNumber = randomNumber;
+        return randomNumber;
+    }
 </script>
 <style>
+    #wrong {
+        color: transparent;
+    }
+
+    #correct {
+        color: transparent;
+    }
+
     .main {
         margin: 0;
         display: flex;
