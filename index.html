@@ -8,8 +8,9 @@
 </head>
 
 <body>
-    <div>
+    <div class="button">
         <button onclick="changeMode('number')">Number</button>
+        <button onclick="changeMode('mathematical')">Mathematical</button>
         <button onclick="changeMode('verb')">Verb</button>
         <button onclick="changeMode('adverb')">Adverb</button>
         <button onclick="changeMode('thing')">Thing</button>
@@ -18,7 +19,7 @@
         <button onclick="changeMode('conversation')">Conversation</button>
     </div>
     <div id="correctAnswer">Correct 😺 0</div>
-    <div id="wrongAnswer">Wrong 😭 0</div>
+    <div id="wrongAnswer">Wrong 😿 0</div>
     <div class="main">
         <div>
             <p id="wrong">Wrong!!</p>
@@ -30,7 +31,7 @@
 </body>
 <script src="question.js"></script>
 <script>
-    let mode = "number"
+    let mode = "mathematical"
     let prevNumber = 0
     let correctAnswer = 0
     let wrongAnswer = 0
@@ -52,6 +53,8 @@
             [word, answer] = preposition[randomDiffFromPrevious(0, preposition.length)].split(',');
         } else if (mode == "thing") {
             [word, answer] = thing[randomDiffFromPrevious(0, thing.length)].split(',');
+        } else if (mode == "mathematical") {
+            [word, answer] = mathematical[randomDiffFromPrevious(0, mathematical.length)].split(',');
         }
 
         document.getElementById('word').textContent = word
@@ -64,8 +67,8 @@
     let answer = ""
 
     // get first word - answer
-    const randomIndex = Math.floor(Math.random() * number.length);
-    [word, answer] = number[randomIndex].split(',');
+    const randomIndex = Math.floor(Math.random() * mathematical.length);
+    [word, answer] = mathematical[randomIndex].split(',');
 
     document.getElementById('word').textContent = word
 
@@ -89,7 +92,10 @@
                     [word, answer] = preposition[randomDiffFromPrevious(0, preposition.length)].split(',');
                 } else if (mode == "thing") {
                     [word, answer] = thing[randomDiffFromPrevious(0, thing.length)].split(',');
+                } else if (mode == "mathematical") {
+                    [word, answer] = mathematical[randomDiffFromPrevious(0, mathematical.length)].split(',');
                 }
+
 
                 showCorrect()
                 document.getElementById('word').textContent = word
@@ -98,7 +104,7 @@
             } else {
                 showWrong()
                 wrongAnswer += 1
-                document.getElementById('wrongAnswer').textContent = "Wrong 😭 " + wrongAnswer
+                document.getElementById('wrongAnswer').textContent = "Wrong 😿 " + wrongAnswer
             }
 
             document.getElementById('answer').value = ""
@@ -137,6 +143,20 @@
     }
 </script>
 <style>
+    html,
+    body {
+        height: 100vh;
+        padding: 1px;
+        overflow: hidden;
+    }
+
+    .button {
+        display: flex;
+        gap: 4px;
+        flex-wrap: wrap;
+        margin-bottom: 4px;
+    }
+
     #wrong {
         color: transparent;
     }
@@ -150,15 +170,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 90vh;
+        text-align: center;
     }
 
     input {
         height: 25px;
-    }
-
-    .main {
-        text-align: center;
     }
 </style>
 
