@@ -99,7 +99,6 @@ const number = [
     "97,noventa y siete",
     "98,noventa y ocho",
     "99,noventa y nueve",
-    "100,ciento",
     "10,diez",
     "20,veinte",
     "30,treinta",
@@ -154,6 +153,7 @@ const verb = [
     "open,abrir",
     "sleep,dormir",
     "see,ver",
+    "hungry,hambre"
 ]
 
 const conjunction = [
@@ -171,17 +171,14 @@ const conjunction = [
     "i have dog and cat,tengo perro y gato"
 ]
 
-const conversation = [
-    "i don't know,no se",
-    "i am ichsan,yo soy ichsan",
-    "i am happy,estoy feliz",
-    "i am healty,estoy sano",
-    "i am at home,estoy en casa",
-    "i am studying,estoy estudiando",
-    "i am tall,soy alto",
-    "i am student,soy estudiante",
-    "i am father of ichsan,soy el padre de ichsan",
-    "What is your name?,como te llamas"
+const question = [
+    "How are you?,como estas",
+    "What is your name?,como te llamas",
+    "Whats your doing?,que haces",
+    "Are you?,tienes",
+    "Why?,por que",
+    "Where?,donde",
+    "Where are you?,donde estas",
 ]
 
 const preposition = [

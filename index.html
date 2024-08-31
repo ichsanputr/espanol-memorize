@@ -16,7 +16,7 @@
         <button onclick="changeMode('thing')">Thing</button>
         <button onclick="changeMode('conjunction')">Conjunction</button>
         <button onclick="changeMode('preposition')">Preposition</button>
-        <button onclick="changeMode('conversation')">Conversation</button>
+        <button onclick="changeMode('question')">Question</button>
     </div>
     <div id="correctAnswer">Correct 😺 0</div>
     <div id="wrongAnswer">Wrong 😿 0</div>
@@ -45,8 +45,8 @@
             [word, answer] = verb[randomDiffFromPrevious(0, verb.length)].split(',');
         } else if (mode == "conjunction") {
             [word, answer] = conjunction[randomDiffFromPrevious(0, conjunction.length)].split(',');
-        } else if (mode == "conversation") {
-            [word, answer] = conversation[randomDiffFromPrevious(0, conversation.length)].split(',');
+        } else if (mode == "question") {
+            [word, answer] = question[randomDiffFromPrevious(0, question.length)].split(',');
         } else if (mode == "adverb") {
             [word, answer] = adverb[randomDiffFromPrevious(0, adverb.length)].split(',');
         } else if (mode == "preposition") {
@@ -84,8 +84,8 @@
                     [word, answer] = verb[randomDiffFromPrevious(0, verb.length)].split(',');
                 } else if (mode == "conjunction") {
                     [word, answer] = conjunction[randomDiffFromPrevious(0, conjunction.length)].split(',');
-                } else if (mode == "conversation") {
-                    [word, answer] = conversation[randomDiffFromPrevious(0, conversation.length)].split(',');
+                } else if (mode == "question") {
+                    [word, answer] = question[randomDiffFromPrevious(0, question.length)].split(',');
                 } else if (mode == "adverb") {
                     [word, answer] = adverb[randomDiffFromPrevious(0, adverb.length)].split(',');
                 } else if (mode == "preposition") {
