@@ -162,8 +162,9 @@
     const today = new Date();
     const timeDifference = today - start;
     const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    const weeks = Math.floor(daysDifference / 7);
 
-    document.getElementById('day').textContent = "I learned " + daysDifference + " Day 🔥"
+    document.getElementById('day').textContent = "Learned " + weeks + " Week and " + daysDifference % 7 + " Day 🔥"
 </script>
 <style>
     html,
