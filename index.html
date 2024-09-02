@@ -17,7 +17,10 @@
         <button onclick="changeMode('thing')">Thing</button>
         <button onclick="changeMode('conjunction')">Conjunction</button>
         <button onclick="changeMode('preposition')">Preposition</button>
+        <button onclick="changeMode('pasttense')">Past Tense</button>
         <button onclick="changeMode('question')">Question</button>
+        <button onclick="changeMode('konjugasipresent')">Present Conjugation</button>
+        <button onclick="changeMode('konjugasipast')">Past Conjugation</button>
     </div>
     <div id="correctAnswer">Correct 😺 0</div>
     <div id="wrongAnswer">Wrong 😿 0</div>
@@ -56,6 +59,12 @@
             [word, answer] = thing[randomDiffFromPrevious(0, thing.length)].split(',');
         } else if (mode == "mathematical") {
             [word, answer] = mathematical[randomDiffFromPrevious(0, mathematical.length)].split(',');
+        } else if (mode == "pasttense") {
+            [word, answer] = pasttense[randomDiffFromPrevious(0, pasttense.length)].split(',');
+        } else if (mode == "konjugasipresent") {
+            [word, answer] = konjugasipresent[randomDiffFromPrevious(0, konjugasipresent.length)].split(',');
+        } else if (mode == "konjugasipast") {
+            [word, answer] = konjugasipast[randomDiffFromPrevious(0, konjugasipast.length)].split(',');
         }
 
         document.getElementById('word').textContent = word
@@ -77,7 +86,7 @@
         if (event.key === "Enter" || event.keyCode === 13) {
             const inputValue = event.target.value;
 
-            if (inputValue.toLowerCase().replace(/\s+/g, "") == answer) {
+            if (inputValue.toLowerCase() == answer) {
                 // based on mode
                 if (mode == "number") {
                     [word, answer] = number[randomDiffFromPrevious(0, number.length)].split(',');
@@ -95,6 +104,12 @@
                     [word, answer] = thing[randomDiffFromPrevious(0, thing.length)].split(',');
                 } else if (mode == "mathematical") {
                     [word, answer] = mathematical[randomDiffFromPrevious(0, mathematical.length)].split(',');
+                } else if (mode == "pasttense") {
+                    [word, answer] = pasttense[randomDiffFromPrevious(0, pasttense.length)].split(',');
+                } else if (mode == "konjugasipresent") {
+                    [word, answer] = konjugasipresent[randomDiffFromPrevious(0, konjugasipresent.length)].split(',');
+                } else if (mode == "konjugasipast") {
+                    [word, answer] = konjugasipast[randomDiffFromPrevious(0, konjugasipast.length)].split(',');
                 }
 
 
@@ -148,7 +163,7 @@
     const timeDifference = today - start;
     const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
 
-    document.getElementById('day').textContent = "I learned " + daysDifference + " Day"
+    document.getElementById('day').textContent = "I learned " + daysDifference + " Day 🔥"
 </script>
 <style>
     html,
@@ -159,7 +174,7 @@
     }
 
     #day {
-        padding: 0.5rem 0;
+        padding: 0.2rem 0;
     }
 
     .button {

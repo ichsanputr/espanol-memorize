@@ -153,7 +153,8 @@ const verb = [
     "open,abrir",
     "sleep,dormir",
     "see,ver",
-    "hungry,hambre"
+    "hungry,hambre",
+    "travel,viajar"
 ]
 
 const conjunction = [
@@ -179,6 +180,12 @@ const question = [
     "Why?,por que",
     "Where?,donde",
     "Where are you?,donde estas",
+    "What music do you like?,que musica te gusta",
+    "What music do you like?,quien",
+    "What is he?,quien es el",
+    "Who do you like?,quien te gusta",
+    "How,como",
+    "When,quando"
 ]
 
 const preposition = [
@@ -202,4 +209,50 @@ const thing = [
 const adverb = [
     "now,ahora",
     "today,hoy",
+    "last night,anoche",
+]
+
+const pasttense = [
+    "they ate pizza,ellos comieron pizza",
+    "we traveled to bali,nosotros viajamos a bali",
+    "she wrote a book,ella escribio una libro",
+    "she studied,ella estudio",
+    "they played,ellos jugaron",
+    "you studied,tu estudiaste"
+]
+
+const konjugasipresent = [
+    "yo - ar,o",
+    "tu - ar,as",
+    "el/ella/usted - ar,a",
+    "nosotros/nosotras - ar,amos",
+    "vosotros/vosotras - ar,ais",
+    "ellas/ellos/ustedes - ar,an",
+    "yo - er,o",
+    "tu - er,es",
+    "el/ella/usted - er,e",
+    "nosotros/nosotras - er,emos",
+    "vosotros/vosotras - er,eis",
+    "ellas/ellos/ustedes - er,en",
+    "yo - ir,o",
+    "tu - ir,es",
+    "el/ella/usted - ir,e",
+    "nosotros/nosotras - ir,imos",
+    "vosotros/vosotras - ir,is",
+    "ellas/ellos/ustedes - ir,en",
+]
+
+const konjugasipast = [
+    "yo - ar - preterite,e",
+    "tu - ar - preterite,aste",
+    "el/ella/usted - ar - preterite,o",
+    "nosotros/nosotras - ar - preterite,amos",
+    "vosotros/vosotras - ar - preterite,asteis",
+    "ellas/ellos/ustedes - ar - preterite,aron",
+    "yo - er/ir - preterite,i",
+    "tu - er/ir - preterite,iste",
+    "el/ella/usted - er/ir - preterite,io",
+    "nosotros/nosotras - er/ir - preterite,imos",
+    "vosotros/vosotras - er/ir - preterite,isteis",
+    "ellas/ellos/ustedes - er/ir - preterite,ieron",
 ]
