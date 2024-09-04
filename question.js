@@ -226,13 +226,17 @@ const pasttense = [
     "they used to study a lot,ellos estudiaban mucho",
     "i used to sleep well,yo dormia bien",
     "we used to work here,nosotros trabajabamos aqui",
-    "usteded aprendían espanol,you all used to study spanish",
+    "you all used to study spanish,ustedes aprendian espanol",
     "you ate,comiste",
     "we wrote,nosotros escribimos",
     "you all spoke,vosotros hablasteis",
     "they spoke,ellos hablaron",
     "i took,yo tome",
     "you took,tu tomaste",
+    "you used to take,tu tomabas",
+    "i was drinking,yo bebia",
+    "you was drinking,tu bebias",
+    "we drank,nosotros bebamos",
 ]
 
 const konjugasipresent = [
