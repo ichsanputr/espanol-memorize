@@ -210,6 +210,7 @@ const adverb = [
     "now,ahora",
     "today,hoy",
     "last night,anoche",
+    "here,aqui"
 ]
 
 const pasttense = [
@@ -218,7 +219,14 @@ const pasttense = [
     "she wrote a book,ella escribio una libro",
     "she studied,ella estudio",
     "they played,ellos jugaron",
-    "you studied,tu estudiaste"
+    "you studied,tu estudiaste",
+    "you used to eat bread,tu comia pan",
+    "you used to drink coffe,tu bebias coffee",
+    "we used to play football,nosotros jugabamos futbol",
+    "they used to study a lot,ellos estudiaban mucho",
+    "i used to sleep well,yo dormia bien",
+    "we used to work here,nosotros trabajabamos aqui",
+    "usteded aprendían espanol,you all used to study spanish"
 ]
 
 const konjugasipresent = [
@@ -255,4 +263,16 @@ const konjugasipast = [
     "nosotros/nosotras - er/ir - preterite,imos",
     "vosotros/vosotras - er/ir - preterite,isteis",
     "ellas/ellos/ustedes - er/ir - preterite,ieron",
+    "yo - ar - imperfect,aba",
+    "tu - ar - imperfect,abas",
+    "el/ella/usted - ar - imperfect,aba",
+    "nosotros/nosotras - ar - imperfect,abamos",
+    "vosotros/vosotras - ar - imperfect,abais",
+    "ellas/ellos/ustedes - ar - imperfect,aban",
+    "yo - er/ir - imperfect,ia",
+    "tu - er/ir - imperfect,ias",
+    "el/ella/usted - er/ir - imperfect,ia",
+    "nosotros/nosotras - er/ir - imperfect,iamos",
+    "vosotros/vosotras - er/ir - imperfect,iais",
+    "ellas/ellos/ustedes - er/ir - imperfect,ian",
 ]
